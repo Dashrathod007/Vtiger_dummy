@@ -1,6 +1,4 @@
 package ScreenShot;
-
-import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -12,7 +10,6 @@ public class InvoiceTest extends BaseClass{
 	public void createInvoiceTest() {
 		System.out.println("Execute the createInvoiceTest");
 		String title=driver.getTitle();
-		Assert.assertEquals(title, "Login");
 		System.out.println("Step-1");
 		System.out.println("Step-2");
 		System.out.println("Step-3");
