@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.Status;
 import com.comcast.crm.BaseClassUtility.copy.BaseClass;
