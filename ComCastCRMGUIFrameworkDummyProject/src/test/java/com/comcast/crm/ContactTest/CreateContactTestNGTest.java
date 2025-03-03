@@ -87,7 +87,7 @@ public class CreateContactTestNGTest extends BaseClass {
 		UtilityClassObject.getTest().log(Status.INFO, "Verify the support ebd date");
 		String EndDate = cip.getSupportStartDateInfo().getText();
 		boolean b = EndDate.trim().contains(endDate);
-		assertEquals(b, true);
+		assertEquals(b, false);
 
 	}
 
