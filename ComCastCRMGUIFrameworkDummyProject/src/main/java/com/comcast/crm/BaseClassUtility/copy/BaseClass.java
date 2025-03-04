@@ -40,7 +40,7 @@ public class BaseClass {
 	public void configBC() throws Exception {
 		System.out.println("====Launch the Browser======");
 
-		String Browser = flib.getDataFromPropertiesFile("browser");
+		String Browser =System.getProperty("browser", flib.getDataFromPropertiesFile("browser"));
 		// flib.getDataFromPropertiesFile("browser");
 		/*
 		 * ChromeOptions options=new ChromeOptions();
@@ -48,7 +48,7 @@ public class BaseClass {
 		 * FirefoxOptions(); options1.addArguments("--inconginito--");
 		 */
 
-		String url = flib.getDataFromPropertiesFile("url");
+		String url =System.getProperty("url",  flib.getDataFromPropertiesFile("url"));
 		if (Browser.equals("chrome")) {
 			driver = new ChromeDriver();
 		} else if (Browser.equals("firefox")) {
@@ -68,8 +68,8 @@ public class BaseClass {
 	public void configBM() throws Exception {
 		System.out.println("=====Login=====");
 		LoginPage lp = new LoginPage(driver);
-		String Username = flib.getDataFromPropertiesFile("username");
-		String Password = flib.getDataFromPropertiesFile("password");
+		String Username =System.getProperty( "username" , flib.getDataFromPropertiesFile("username"));
+		String Password = System.getProperty( "password" , flib.getDataFromPropertiesFile("password"));
 		lp.loginToApp(Username, Password);
 	}
 
